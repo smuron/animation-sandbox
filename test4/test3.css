@@ -1,0 +1,227 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  width: 1920px;
+  height: 1080px;
+  -webkit-transform-style: preserve-3d;
+  transform: perspective(800px);
+  border: 1px solid black;
+  box-sizing: border-box; 
+}
+
+
+.row {
+  height: 60px;
+}
+
+.box {
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 1px black solid;
+  box-sizing: border-box;
+}
+
+.test2:nth-of-type(6n+0) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  background-color: red;
+}
+.test2:nth-of-type(6n+5) {
+  -webkit-animation-delay: -1.333s;
+  animation-delay: -1.333s;
+  background-color: orange;
+}
+.test2:nth-of-type(6n+4) {
+  -webkit-animation-delay: -2.666s;
+  animation-delay: -2.666s;
+  background-color: yellow;
+}
+.test2:nth-of-type(6n+3) {
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+  background-color: green;
+}
+.test2:nth-of-type(6n+2) {
+  -webkit-animation-delay: -5.333s;
+  animation-delay: -5.333s;
+  background-color: blue;
+}
+.test2:nth-of-type(6n+1) {
+  -webkit-animation-delay: -6.666s;
+  animation-delay: -6.666s;
+  background-color: purple;
+}
+/*
+.test2:nth-of-type(16n+1) {
+  -webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+.test2:nth-of-type(16n+2) {
+  -webkit-animation-delay: -0.5s;
+	animation-delay: -0.5s;
+}
+.test2:nth-of-type(16n+3) {
+  -webkit-animation-delay: -1s;
+	animation-delay: -1s;
+}
+.test2:nth-of-type(16n+4) {
+  -webkit-animation-delay: -1.5s;
+	animation-delay: -1.5s;
+}
+.test2:nth-of-type(16n+5) {
+  -webkit-animation-delay: -2s;
+	animation-delay: -2s;
+}
+.test2:nth-of-type(16n+6) {
+  -webkit-animation-delay: -2.5s;
+	animation-delay: -2.5s;
+}
+.test2:nth-of-type(16n+7) {
+  -webkit-animation-delay: -3s;
+	animation-delay: -3s;
+}
+.test2:nth-of-type(16n+8) {
+  -webkit-animation-delay: -3.5s;
+	animation-delay: -3.5s;
+}
+.test2:nth-of-type(16n+9) {
+  -webkit-animation-delay: -4s;
+	animation-delay: -4s;
+}
+.test2:nth-of-type(16n+10) {
+  -webkit-animation-delay: -4.5s;
+	animation-delay: -4.5s;
+}
+.test2:nth-of-type(16n+11) {
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+.test2:nth-of-type(16n+12) {
+  -webkit-animation-delay: -5.5s;
+  animation-delay: -5.5s;
+}
+.test2:nth-of-type(16n+13) {
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+.test2:nth-of-type(16n+14) {
+  -webkit-animation-delay: -6.5s;
+  animation-delay: -6.5s;
+}
+.test2:nth-of-type(16n+15) {
+  -webkit-animation-delay: -7s;
+  animation-delay: -7s;
+}
+.test2:nth-of-type(16n+0) {
+  -webkit-animation-delay: -7.5s;
+  animation-delay: -7.5s;
+}
+*/
+
+.test2 {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  animation-name: pulse;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  /* background-image: url('../trippydoge.png'); */
+  -webkit-backface-visibility: hidden;
+}
+
+.test3 {
+  -webkit-animation: pulse 10s ease-in-out 0s infinite alternate;
+  animation: pulse 10s ease-in-out 0s infinite alternate;
+}
+
+.test1 {
+  top: 0;
+  left: 0;
+  -webkit-animation: ani2 5s ease-in-out 0s infinite;
+  animation: ani2 5s ease-in-out 0s infinite;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    /* transform: translate3d(0px, 0px, 100px); */
+    transform: translate3d(0px, 0px, 800px) rotateY(90deg) rotateZ(20deg);
+    opacity: 0.15;
+    /* z-index: -100; */
+  }
+
+  50% {
+    /* transform: translate3d(0px, 0px, -100px); */
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) rotateY(0deg) rotateZ(0deg);
+    /* z-index: 100; */
+  }
+
+  to {
+    /* transform: translate3d(0px, 0px, 100px); */
+    opacity: 0.15;
+    transform: translate3d(0px, 0px, 800px) rotateY(-90deg) rotateZ(-20deg);
+    /* z-index: -100; */
+  }
+}
+
+@keyframes pulse {
+  from {
+    /* transform: translate3d(0px, 0px, 100px); */
+    transform: translate3d(0px, 0px, 900px) rotateY(90deg) rotateZ(20deg);
+    opacity: 0.1;
+    /* z-index: -100; */
+  }
+
+  50% {
+    /* transform: translate3d(0px, 0px, -100px); */
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) rotateY(0deg) rotateZ(0deg);
+    /* z-index: 100; */
+  }
+
+  to {
+    /* transform: translate3d(0px, 0px, 100px); */
+    opacity: 0.25;
+    transform: translate3d(0px, 0px, 800px) rotateY(-90deg) rotateZ(-20deg);
+    /* z-index: -100; */
+  }
+}
+
+@keyframes ani2 {
+  from {
+    background-image: url('../trippydoge.png');
+    transform: translate3d(960px, 540px, 400px) rotateZ(0deg);
+    z-index: 100;
+  }
+
+  to {
+    background-image: none;
+    transform: translate3d(0px, 0px, 0px) rotateX(180deg) rotateZ(90deg);
+    z-index: 0;
+  }
+}

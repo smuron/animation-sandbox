@@ -1,0 +1,178 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: black;
+}
+
+.parent {
+  width: 1920px;
+  height: 1080px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  border: 1px solid black;
+  box-sizing: border-box; 
+}
+
+
+.row {
+  height: 60px;
+}
+
+.box {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-image: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* border: 1px black solid; */
+  box-sizing: border-box;
+}
+
+.cya {
+  -webkit-animation-name: cya;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-timing-function: ease-in-out;
+  /* -webkit-animation-iteration-count: infinite; */
+  /* -webkit-animation-direction: alternate; */
+  -webkit-animation-play-state: running;
+  animation-name: cya;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: alternate; */
+  animation-play-state: running;
+  /* background-image: url('../trippydoge.png'); */
+  /* -webkit-backface-visibility: hidden; */
+}
+
+.test2 {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in;
+  /* -webkit-animation-iteration-count: infinite; */
+  /* -webkit-animation-direction: alternate; */
+  -webkit-animation-play-state: running;
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: alternate; */
+  animation-play-state: running;
+  /* background-image: url('../trippydoge.png'); */
+  /* -webkit-backface-visibility: hidden; */
+}
+
+.unstable {
+  -webkit-animation-name: unstable;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  /* -webkit-animation-direction: normal; */
+  -webkit-animation-play-state: running;
+  animation-name: unstable;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+  animation-play-state: running;
+  /* background-image: url('../trippydoge.png'); */
+  /* -webkit-backface-visibility: hidden; */
+}
+
+.test3 {
+  -webkit-animation: pulse 10s ease-in-out 0s infinite alternate;
+  animation: pulse 10s ease-in-out 0s infinite alternate;
+}
+
+.test1 {
+  top: 0;
+  left: 0;
+  -webkit-animation: ani2 5s ease-in-out 0s infinite;
+  animation: ani2 5s ease-in-out 0s infinite;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    /* transform: translate3d(0px, 0px, 100px); */
+    transform: translate3d(0px, 0px, 800px) rotateY(180deg) rotateZ(50deg);
+    opacity: 0.15;
+    /* z-index: -100; */
+  }
+
+  to {
+    /* transform: translate3d(0px, 0px, -100px); */
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) rotateY(0deg) rotateZ(0deg);
+    /* z-index: 100; */
+  }
+}
+
+@keyframes pulse {
+  from {
+    /* transform: translate3d(0px, 0px, 100px); */
+    transform: translate3d(0px, 0px, 800px) rotateY(180deg) rotateZ(50deg);
+    opacity: 0.15;
+    /* z-index: -100; */
+  }
+
+  to {
+    /* transform: translate3d(0px, 0px, -100px); */
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) rotateY(0deg) rotateZ(0deg);
+    /* z-index: 100; */
+  }
+}
+
+@-webkit-keyframes cya {
+  from {
+    /* transform: translate3d(0px, 0px, 100px); */
+    transform: translate3d(0px, 0px, 0px) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    /* z-index: -100; */
+  }
+
+  to {
+    /* transform: translate3d(0px, 0px, -100px); */
+    opacity: 0;
+    transform: translate3d(0px, 0px, -5000px) rotateY(90deg);
+    /* z-index: 100; */
+  }
+}
+
+@keyframes cya {
+  from {
+    /* transform: translate3d(0px, 0px, 100px); */
+    transform: translate3d(0px, 0px, 0px) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    /* z-index: -100; */
+  }
+
+  to {
+    /* transform: translate3d(0px, 0px, -100px); */
+    opacity: 0;
+    transform: translate3d(0px, 0px, -5000px) rotateY(90deg);
+    /* z-index: 100; */
+  }
+}
+
+@-webkit-keyframes unstable {
+  from {
+    /* transform: translate3d(0px, 0px, 100px); */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    /* z-index: -100; */
+  }
+
+  50% {
+    -webkit-transform: translate3d(0px, 0px, -800px);
+  }
+
+  to {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }  
+}

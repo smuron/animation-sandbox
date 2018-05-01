@@ -1,0 +1,70 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.parent {
+  width: 600px;
+  height: 600px;
+  perspective: 1600px;
+}
+
+.box {
+  position: absolute;
+  display: inline-block;
+  width: 320px;
+  height: 320px;
+  background-image: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 3px black solid;
+  box-sizing: border-box;
+}
+
+.test1 {
+  -webkit-animation: ani2 5s ease-in-out 0s infinite;
+  animation: ani2 5s ease-in-out 0s infinite;
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    background-image: url('../trippydoge.png');
+    transform: scale(1,1) translate3d(200px, 200px, 0px) rotateZ(0deg);
+  }
+
+  50% {
+    background-image: url('../trippydoge.png');
+  }
+
+  50.1% {
+    background-image: none;
+  }
+
+  to {
+    background-image: none;
+    transform: scale(0.5,0.5) translate3d(0px, 0px, 100px) rotateX(180deg) rotateZ(90deg);
+  }
+}
+
+@keyframes ani2 {
+  from {
+    background-image: url('../trippydoge.png');
+    transform: scale(1,1) translate3d(200px, 200px, 0px) rotateZ(0deg);
+  }
+
+  50% {
+    background-image: url('../trippydoge.png');
+  }
+
+  50.1% {
+    background-image: none;
+  }
+
+  to {
+    background-image: none;
+    transform: scale(0.5,0.5) translate3d(0px, 0px, 100px) rotateX(180deg) rotateZ(90deg);
+  }
+}
